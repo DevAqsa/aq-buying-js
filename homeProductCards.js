@@ -5,19 +5,19 @@ const productContainer = document.querySelector("#productContainer");
 const productTemplate = document.querySelector("#productTemplate");
 
 export const showProductContainer = (products) => {
-  console.log(products)
+  
   if (!products) {
     return false;
 
   }
 
   products.forEach((curProd) => {
-    const { brand, category, description, id, image, name, price, stock } =
+    const {  category, description, id, image, name, price, stock } =
       curProd;
 
     const productClone = document.importNode(productTemplate.content, true);
 
-    // productClone.querySelector("#cardValue").setAttribute("id", `card${id}`);
+    // productClone.querySelector("#cardValue").setAttribute("id", `#cardValue ${id}`);
 
     productClone.querySelector(".category").textContent = category;
     productClone.querySelector(".productName").textContent = name;
